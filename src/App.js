@@ -1,18 +1,25 @@
-
-import './App.css';
+import "./App.css";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import { useState } from "react";
-import Alert from "react-bootstrap/Alert";
-import Button from "react-bootstrap/Button";
-
-
-
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
 function App() {
   return (
     <div className="app">
+      <Navbar className="bg-body-tertiary">
+        <Container>
+          <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text>
+              Signed in as: <a href="#login">Mark Otto</a>
+            </Navbar.Text>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
       <Alert variant="success">
         <Alert.Heading>Hey, nice to see you</Alert.Heading>
         <p>
@@ -58,7 +65,7 @@ function App() {
           <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
         </ListGroup>
       </Card>
-      <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+      <Alert variant="danger">
         <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
         <p>
           Change this and that and try again. Duis mollis, est non commodo
